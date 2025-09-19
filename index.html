@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Web-a-thon 2025</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <!-- Logo on top-left -->
+      <a href="#">
+        <img src="4.jpeg" alt="Event Logo" class="nav-logo" />
+      </a>
+
+      <!-- Navigation Links -->
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Schedule</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Prizes</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main section -->
+  <main class="main" role="main">
+    <section class="left">
+      <!-- Department info above title -->
+      <h3 class="dept">CSE (AI & ML), CSE (BS)</h3>
+      <h1>WEB-A-THON</h1>
+      <p class="sub-tagline">Showcasing Innovation and Technical Excellence in Web Technologies</p>
+      <p class="tagline">Join us for an exciting journey of innovation, creativity, and coding brilliance.</p>
+
+      <!-- Live Countdown Timer -->
+      <div class="countdown-box" id="countdown">
+        <div id="timeValues">
+          <span id="days">00</span>d :
+          <span id="hours">00</span>h :
+          <span id="minutes">00</span>m :
+          <span id="seconds">00</span>s
+        </div>
+        <small>Time until event</small>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="actions">
+        <a class="btn primary" id="viewScheduleBtn" href="#" title="View schedule">View Schedule</a>
+        <a class="btn outline" href="#" title="Register">Register Now</a>
+      </div>
+
+      <div class="note">
+        <strong>Countdown target:</strong> 20 September 2025 — 03:00 PM
+      </div>
+    </section>
+
+    <!-- Right-side box with all logos -->
+    <aside class="right">
+      <div class="timer-box">
+        <div class="logo-row">
+          <img src="logo1.png" alt="Logo 1" class="event-logo" />
+          <img src="logo2.png" alt="Logo 2" class="event-logo" />
+          <img src="logo3.png" alt="Logo 3" class="event-logo" />
+          <img src="logo4.png" alt="Logo 4" class="event-logo" />
+          <img src="3.jpeg" alt="Logo 5" class="event-logo" />
+        </div>
+        <small class="timer-label">Our Event Partners</small>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Modal for schedule -->
+  <div class="modal" id="scheduleModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content" role="document">
+      <button class="modal-close" id="closeModal" aria-label="Close modal">&times;</button>
+      <h2 id="modalTitle">Event Schedule</h2>
+
+      <div class="schedule">
+        <div class="sched-row"><span class="time">2:30 PM</span> <span class="desc">Opening Ceremony</span></div>
+        <div class="sched-row"><span class="time">3:00 PM</span> <span class="desc">Coding Rounds Begin</span></div>
+        <div class="sched-row"><span class="time">6:00 PM</span> <span class="desc">Break & Networking</span></div>
+        <div class="sched-row"><span class="time">9:00 PM</span> <span class="desc">Closing & Results</span></div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn primary" id="modalOk">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
 
