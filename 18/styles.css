@@ -1,0 +1,260 @@
+:root {
+  --primary-blue: #0F172A;
+  --secondary-orange: #EA5838;
+  --accent-gold: #FFD700;
+  --dark-bg: #0F172A;
+  --white: #FFFFFF;
+}
+
+/* Background with dark overlay */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--white);
+
+  background: 
+    linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)),
+    url("background_image.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Navigation Bar */
+.navbar {
+  background: rgba(15, 23, 42, 0.95);
+  padding: 1rem 2rem;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--accent-gold);
+  transform: translateY(-2px);
+}
+
+/* Main layout */
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  flex-wrap: wrap;
+}
+
+/* Left section */
+.left {
+  max-width: 600px;
+}
+
+.left h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0 0 1rem;
+  color: var(--accent-gold);
+}
+
+.tagline {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.btn {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn.primary {
+  background: var(--primary-blue);
+  color: var(--white);
+}
+
+.btn.primary:hover {
+  background: var(--secondary-orange);
+  transform: translateY(-3px);
+}
+
+.btn.outline {
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.btn.outline:hover {
+  background: var(--white);
+  color: var(--dark-bg);
+  transform: translateY(-3px);
+}
+
+.note {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Right-side box */
+.right {
+  flex: 0 0 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-box {
+  width: 100%;
+  max-width: 550px;
+  height: 380px;
+  background: rgba(26, 86, 219, 0.85);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.55);
+  transition: box-shadow 0.3s ease;
+}
+
+.timer-box:hover {
+  box-shadow: 0 0 25px var(--accent-gold);
+}
+
+/* Logos inside the right box */
+.logo-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.event-logo {
+  max-width: 90px;
+  max-height: 70px;
+  object-fit: contain;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal[aria-hidden="false"] {
+  display: flex;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  position: relative;
+  background: var(--dark-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  color: var(--white);
+  z-index: 1;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.schedule {
+  margin: 1.5rem 0;
+}
+
+.sched-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.modal-actions {
+  text-align: right;
+}
+/* Department text above title */
+.dept {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  margin: 0 0 0.5rem;
+}
+
+/* Subtitle below WEB-A-THON */
+.sub-tagline {
+  font-size: 1.1rem;
+  color: var(--accent-gold);
+  margin: 0.5rem 0 1.5rem;
+}
+
+/* Countdown box (above buttons) */
+.countdown-box {
+  background: rgba(26, 86, 219, 0.85);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.countdown-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--accent-gold);
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+
+.nav-logo {
+  height: 50px;   /* adjust logo size */
+  width: auto;
+  object-fit: contain;
+}
